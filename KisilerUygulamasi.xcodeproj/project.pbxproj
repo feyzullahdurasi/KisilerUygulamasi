@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		6593A32F2C26972B006AC003 /* KisilerUygulamasiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6593A32E2C26972B006AC003 /* KisilerUygulamasiApp.swift */; };
-		6593A3312C26972B006AC003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6593A3302C26972B006AC003 /* ContentView.swift */; };
+		6593A3312C26972B006AC003 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6593A3302C26972B006AC003 /* Anasayfa.swift */; };
 		6593A3332C26972C006AC003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6593A3322C26972C006AC003 /* Assets.xcassets */; };
 		6593A3362C26972C006AC003 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6593A3352C26972C006AC003 /* Preview Assets.xcassets */; };
+		6593A33D2C26975A006AC003 /* KisiDetaySayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6593A33C2C26975A006AC003 /* KisiDetaySayfa.swift */; };
+		6593A33F2C26976B006AC003 /* KisiKayitSayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6593A33E2C26976B006AC003 /* KisiKayitSayfa.swift */; };
+		6593A3412C269C5C006AC003 /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6593A3402C269C5C006AC003 /* Kisiler.swift */; };
+		6593A3432C269DCF006AC003 /* KisilerSatir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6593A3422C269DCF006AC003 /* KisilerSatir.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6593A32B2C26972B006AC003 /* KisilerUygulamasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisilerUygulamasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6593A32E2C26972B006AC003 /* KisilerUygulamasiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerUygulamasiApp.swift; sourceTree = "<group>"; };
-		6593A3302C26972B006AC003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6593A3302C26972B006AC003 /* Anasayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anasayfa.swift; sourceTree = "<group>"; };
 		6593A3322C26972C006AC003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6593A3352C26972C006AC003 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6593A33C2C26975A006AC003 /* KisiDetaySayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiDetaySayfa.swift; sourceTree = "<group>"; };
+		6593A33E2C26976B006AC003 /* KisiKayitSayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiKayitSayfa.swift; sourceTree = "<group>"; };
+		6593A3402C269C5C006AC003 /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
+		6593A3422C269DCF006AC003 /* KisilerSatir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerSatir.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				6593A32E2C26972B006AC003 /* KisilerUygulamasiApp.swift */,
-				6593A3302C26972B006AC003 /* ContentView.swift */,
+				6593A3302C26972B006AC003 /* Anasayfa.swift */,
+				6593A33C2C26975A006AC003 /* KisiDetaySayfa.swift */,
+				6593A33E2C26976B006AC003 /* KisiKayitSayfa.swift */,
+				6593A3402C269C5C006AC003 /* Kisiler.swift */,
+				6593A3422C269DCF006AC003 /* KisilerSatir.swift */,
 				6593A3322C26972C006AC003 /* Assets.xcassets */,
 				6593A3342C26972C006AC003 /* Preview Content */,
 			);
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6593A3312C26972B006AC003 /* ContentView.swift in Sources */,
+				6593A33D2C26975A006AC003 /* KisiDetaySayfa.swift in Sources */,
+				6593A33F2C26976B006AC003 /* KisiKayitSayfa.swift in Sources */,
+				6593A3312C26972B006AC003 /* Anasayfa.swift in Sources */,
 				6593A32F2C26972B006AC003 /* KisilerUygulamasiApp.swift in Sources */,
+				6593A3412C269C5C006AC003 /* Kisiler.swift in Sources */,
+				6593A3432C269DCF006AC003 /* KisilerSatir.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
