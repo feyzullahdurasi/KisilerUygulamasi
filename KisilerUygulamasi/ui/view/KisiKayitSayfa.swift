@@ -1,5 +1,5 @@
 //
-//  KisiDetaySayfa.swift
+//  KisiKayitSayfa.swift
 //  KisilerUygulamasi
 //
 //  Created by Feyzullah Durası on 22.06.2024.
@@ -7,15 +7,11 @@
 
 import SwiftUI
 
-struct KisiDetaySayfa: View {
+struct KisiKayitSayfa: View {
     @State private var tfKisiAd = ""
     @State private var tfKisiTel = ""
     
-    var kisi = Kisiler()
-    
-    func guncelle(kisi_id:Int, kisi_ad:String, kisi_tel:String){
-        
-    }
+    var viewModel = KisiKayitViewModel()
     
     var body: some View {
         VStack(spacing: 100) {
@@ -27,17 +23,14 @@ struct KisiDetaySayfa: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
-            Button("Güncelle"){
-                guncelle(kisi_id: kisi.kisi_id!, kisi_ad: tfKisiAd, kisi_tel: tfKisiTel)
+            Button("Kaydet"){
+                viewModel.kaydet(kisi_ad: tfKisiAd, kisi_tel: tfKisiTel)
             }
-        }.navigationTitle("Kişi Güncelle")
-            .onAppear(){
-                tfKisiAd = kisi.kisi_ad!
-                tfKisiTel = kisi.kisi_tel!
-            }
+        }.navigationTitle("Kişi Kayıt")
+            
     }
 }
 
 #Preview {
-    KisiDetaySayfa()
+    KisiKayitSayfa()
 }
