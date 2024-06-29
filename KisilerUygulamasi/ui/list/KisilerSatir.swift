@@ -9,7 +9,7 @@ import SwiftUI
 
 struct KisilerSatir: View {
     
-    var kisi = Kisiler()
+    var kisi = KisilerModel()
     
     var body: some View {
         VStack(alignment: .leading,spacing: 16){

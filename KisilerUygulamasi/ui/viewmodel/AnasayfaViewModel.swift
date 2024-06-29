@@ -6,26 +6,40 @@
 //
 
 import Foundation
+import CoreData
 
 class AnasayfaViewModel : ObservableObject {
-    @Published var kisilerListesi = [Kisiler]()
+    @Published var kisilerListesi = [KisilerModel]()
+    
+    let context = persistentContainer.viewContext
     
     func kisileriYukle(){
-        var liste = [Kisiler]()
-        let k1 = Kisiler(kisi_id: 1, kisi_ad: "Ahmet", kisi_tel: "1111111")
-        let k2 = Kisiler(kisi_id: 2, kisi_ad: "Zeynep", kisi_tel: "2222222")
-        let k3 = Kisiler(kisi_id: 3, kisi_ad: "Feyzullah", kisi_tel: "33333333")
-        liste.append(k1)
-        liste.append(k2)
-        liste.append(k3)
-        kisilerListesi = liste
+        do{
+            let liste = try context.fetch(KisilerModel.fetchRequest())
+            kisilerListesi = liste
+            
+        } catch{
+            print(error.localizedDescription)
+        }
+        
     }
     
     func ara(aramaKelimesi:String){
+        do{
+            let fr = KisilerModel.fetchRequest()
+            fr.predicate = NSPredicate(format: "kisi_ad CONTAINS[c] %@", aramaKelimesi)
+            
+            let liste = try context.fetch(fr)
+            kisilerListesi = liste
+        } catch {
+            print(error.localizedDescription)
+        }
         
     }
     
-    func sil(kisiSil:Int){
-        
+    func sil(kisi:KisilerModel){
+        context.delete(kisi)
+        saveContext()
+        kisileriYukle()
     }
 }

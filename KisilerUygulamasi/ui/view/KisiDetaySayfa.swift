@@ -11,7 +11,9 @@ struct KisiDetaySayfa: View {
     @State private var tfKisiAd = ""
     @State private var tfKisiTel = ""
     
-    var kisi = Kisiler()
+    var kisi = KisilerModel()
+    
+    @Binding var kisilerListesi:[KisilerModel]
     
     var viewModel = KisiDetayViewModel()
     
@@ -26,7 +28,8 @@ struct KisiDetaySayfa: View {
                 .padding()
             
             Button("Güncelle"){
-                viewModel.guncelle(kisi_id: kisi.kisi_id!, kisi_ad: tfKisiAd, kisi_tel: tfKisiTel)
+                viewModel.guncelle(kisi: kisi, kisi_ad: tfKisiAd, kisi_tel: tfKisiTel)
+                kisilerListesi.removeAll()
             }
         }.navigationTitle("Kişi Güncelle")
             .onAppear(){
@@ -35,7 +38,7 @@ struct KisiDetaySayfa: View {
             }
     }
 }
-
+/*
 #Preview {
     KisiDetaySayfa()
-}
+}*/

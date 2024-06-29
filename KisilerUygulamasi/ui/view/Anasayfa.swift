@@ -9,25 +9,24 @@ import SwiftUI
 
 struct Anasayfa: View {
     
-    @State private var AramaKelimesi = ""
+    @State private var aramaKelimesi = ""
     
     @ObservedObject var viewModel = AnasayfaViewModel()
     
     func sil(at offsets:IndexSet){
         let kisi = viewModel.kisilerListesi[offsets.first!]
-            viewModel.kisilerListesi.remove(at: offsets.first!)
-        viewModel.sil(kisiSil: kisi.kisi_id!)
+        viewModel.sil(kisi: kisi)
     }
     var body: some View {
         NavigationStack{
             List{
                 ForEach(viewModel.kisilerListesi){kisi in
-                    NavigationLink(destination: KisiDetaySayfa(kisi: kisi)){
+                    NavigationLink(destination: KisiDetaySayfa(kisi: kisi, kisilerListesi: $viewModel.kisilerListesi)){
                             KisilerSatir(kisi: kisi)
                     }
                 }.onDelete(perform: sil)
                 
-            }.navigationTitle("Kisiler")
+            }.navigationTitle("Kişiler")
                 .toolbar{
                     ToolbarItem(placement: .navigationBarTrailing){
                         NavigationLink(destination: KisiKayitSayfa()){
@@ -38,10 +37,16 @@ struct Anasayfa: View {
                 }.onAppear(){
                     viewModel.kisileriYukle()
                 }
-        }.searchable(text: $AramaKelimesi, prompt: "Ara")
-            /*.onChange(of: AramaKelimesi){ s in
-                print(s)
-            }*/
+        }.searchable(text: $aramaKelimesi, prompt: "Ara")
+            .onChange(of: aramaKelimesi){ s in
+                
+                if s == "" {
+                    viewModel.kisileriYukle()
+                    
+                } else {
+                    viewModel.ara(aramaKelimesi: s)
+                }
+            }
     }
 }
 

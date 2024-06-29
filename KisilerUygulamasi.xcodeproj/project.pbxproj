@@ -18,6 +18,7 @@
 		65B3DDB82C2725B800596764 /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B3DDB72C2725B800596764 /* AnasayfaViewModel.swift */; };
 		65B3DDBA2C2725D400596764 /* KisiDetayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B3DDB92C2725D400596764 /* KisiDetayViewModel.swift */; };
 		65B3DDBC2C2725ED00596764 /* KisiKayitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B3DDBB2C2725ED00596764 /* KisiKayitViewModel.swift */; };
+		65F3899E2C2B0020004E1943 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65F3899C2C2B0020004E1943 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		65B3DDB72C2725B800596764 /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
 		65B3DDB92C2725D400596764 /* KisiDetayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiDetayViewModel.swift; sourceTree = "<group>"; };
 		65B3DDBB2C2725ED00596764 /* KisiKayitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiKayitViewModel.swift; sourceTree = "<group>"; };
+		65F3899D2C2B0020004E1943 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				65B3DDB22C27250D00596764 /* ui */,
 				65B3DDB12C2724FD00596764 /* data */,
 				6593A3322C26972C006AC003 /* Assets.xcassets */,
+				65F3899C2C2B0020004E1943 /* Model.xcdatamodeld */,
 				6593A3342C26972C006AC003 /* Preview Content */,
 			);
 			path = KisilerUygulamasi;
@@ -213,6 +216,7 @@
 				6593A32F2C26972B006AC003 /* KisilerUygulamasiApp.swift in Sources */,
 				65B3DDBC2C2725ED00596764 /* KisiKayitViewModel.swift in Sources */,
 				6593A3412C269C5C006AC003 /* Kisiler.swift in Sources */,
+				65F3899E2C2B0020004E1943 /* Model.xcdatamodeld in Sources */,
 				65B3DDBA2C2725D400596764 /* KisiDetayViewModel.swift in Sources */,
 				6593A3432C269DCF006AC003 /* KisilerSatir.swift in Sources */,
 			);
@@ -420,6 +424,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		65F3899C2C2B0020004E1943 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				65F3899D2C2B0020004E1943 /* Model.xcdatamodel */,
+			);
+			currentVersion = 65F3899D2C2B0020004E1943 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = "/Users/feyzullahdurasi/Dersler/SwiftDersleri/Kasım Adalan /KisilerUygulamasi/KisilerUygulamasi/Model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6593A3232C26972B006AC003 /* Project object */;
 }

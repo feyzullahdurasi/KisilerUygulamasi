@@ -25,6 +25,7 @@ struct KisiKayitSayfa: View {
             
             Button("Kaydet"){
                 viewModel.kaydet(kisi_ad: tfKisiAd, kisi_tel: tfKisiTel)
+                
             }
         }.navigationTitle("Kişi Kayıt")
             
